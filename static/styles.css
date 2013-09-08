@@ -1,0 +1,43 @@
+#wrap-form{
+	width: 50%;
+	border: solid 1px rgb(224, 224, 224);
+	padding: 20px;
+}
+
+.error-form{
+	color:red;
+	font-weight: bold
+}
+
+#wrap-home{
+	padding: 20px;
+	border: solid 1px rgb(223, 228, 223);
+	background: whiteSmoke;
+}
+
+#menu-home{
+	margin-top: 20px;
+}
+
+#group-form input, #group-form textarea{
+	width: 65%;
+}
+
+#group-list {
+	list-style: none;
+	padding: 6;
+	margin: 0;
+}
+
+#group-list li {
+	padding: 2px;
+}
+
+#description-group{
+	font-size: 0.9em;
+	font-family: sans-serif;
+	width: 50%;
+	background: rgb(232, 241, 255);
+	border: solid 1px rgb(223, 223, 223);
+	padding: 9px;
+}

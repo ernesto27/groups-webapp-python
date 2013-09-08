@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="span10" id="wrap-home">
+	<h1>Add group</h1>
+
+  {% if message %}
+    <h4 class="alert alert-info">{{ message }}</h4>
+  {% endif %}
+
+	<form role="form" id="group-form" method="post">
+		<div class="form-group">
+	    	<label for="name">Name</label>
+	    	<input type="text" name="name" class="form-control"  placeholder="">
+        <p class="error-form">{{ error_name }}</p>
+
+	  	</div>
+  		<div class="form-group">
+    		<label for="description">Description</label>
+    		<textarea name="description" class="form-control"></textarea>
+        <p class="error-form">{{ error_description }}</p>
+
+  		</div>
+  		<br>
+  		<button type="submit" class="btn btn-primary">Send</button>
+   </form>
+
+
+
+</div>
+
+
+{% endblock %}

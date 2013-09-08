@@ -1,0 +1,96 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<style type="text/css">
+	#content-post{
+		width: 65%;
+		margin-top: 30px;
+		border: solid 1px rgb(224, 224, 224);
+		padding: 11px;
+		text-align: justify;
+	}
+
+	#add-comment{
+		width: 62%;
+		height: 120px;
+	}
+
+	.wrap-comments{
+		margin-top: 40px;
+	}
+
+	.single-comment{
+		background: white;
+		margin-bottom: 14px;
+		padding: 12px;
+		border: solid 1px rgb(194, 194, 194);
+		width: 60%;
+	}
+</style>
+
+<div class="span8" id="wrap-home">
+	<h2>{{ post.title }}</h2>
+
+	<div id="content-post">
+		{{ post.content }}
+	</div>
+
+	<hr>
+	<div id="add-comment">
+		<h3>Add a comment</h3>
+		<form method="post">
+			<textarea class="form-control" rows="3" name="comment"></textarea>
+			<input type="hidden" name="postid" value="{{post.key().id()}}">
+			<br>
+			<button class="btn btn-warning">send</button>
+		</form>
+	</div>
+
+	<br>
+
+	<div class="wrap-comments">
+		<h3>Comments</h3>
+		
+		<div class="single-comment">
+			this is a comment
+		</div>
+
+		<div class="single-comment">
+			this is a comment
+		</div>
+
+		<div class="single-comment">
+			this is a comment
+		</div>
+	</div>
+
+</div>
+
+ 
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

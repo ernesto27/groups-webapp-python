@@ -1,0 +1,18 @@
+create register form
+login users
+create home page with option for change avatar
+
+user{
+	name
+	email
+	avatar
+}
+
+
+index page with list groups
+option for create group
+
+group{
+	name
+	image
+}

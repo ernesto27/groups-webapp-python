@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="span10" id="wrap-home">
+	<h1>Add post</h1>
+
+  {% if message %}
+    <p class="alert alert-danger" style="width:50%;font-weight:bold">{{ message }}</p>
+	{% endif %}
+  
+	<form role="form" id="group-form" method="post" action="/addpost/{{ group_id}}">
+    <div class="form-group">
+        <label for="title">Title</label>
+        <input type="text" name="title" class="form-control"  placeholder="">
+        <p class="error-form">{{ error_title }}</p>
+
+      </div>
+      <div class="form-group">
+        <label for="content">Content</label>
+        <textarea name="content" class="form-control" style="height:200px"></textarea>
+        <p class="error-form">{{ error_content }}</p>
+
+      </div>
+      <input type="hidden" name="group_id" value="{{ group_id }}">
+      <br>
+      <button type="submit" class="btn btn-primary">Send</button>
+      
+   </form>  
+
+
+</div>
+
+
+{% endblock %}

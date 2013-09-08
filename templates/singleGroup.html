@@ -1,0 +1,64 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<style type="text/css">
+#post-list{
+	list-style: none;
+	padding: 0;
+}
+
+#post-list li{
+	padding: 8px;
+	background:rgb(100, 103, 107);
+	margin-top:4px;
+	margin-bottom:7px;
+	width: 60%;
+	border-radius: 8px;
+}
+
+#post-list li a{
+	color:white;
+	font-weight: bold;
+	font-size: 1.2em;
+
+}
+
+.date-post{
+	float: right;
+	color: white;
+	font-size: 0.8em;
+}
+
+</style>
+
+<div class="span10" id="wrap-home">
+	<h1>Group {{ name }}</h1>
+  <div id="description-group">
+    {{ description }}
+  </div>
+
+  {% if post_add_ok %}
+  	<h4 class="alert alert-success" style="width:50%">Post added!</h4>
+  {% endif %}
+
+
+  <br>
+  <a href="/addpost/{{ group_id }}">Add post</a>
+
+  <h4>Posts </h4>
+  <ul id="post-list">
+  	{% for post in posts %}
+  	<li>
+  		<p class="date-post">{{ post.created.strftime("%d/%m/%y") }}</p>
+  		<a href="/post/{{post.key().id()}}">{{ post.title }}</a></li>
+  	{% endfor %}
+  </ul>
+
+ 
+
+
+</div>
+
+
+{% endblock %}

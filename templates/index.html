@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div class="span8" id="wrap-home">
+	<h1>Groups</h1>
+
+  <ul id="group-list">
+    {% for g in groups %}
+      <li><a href="/group/{{g.key().id()}}">{{ g.name }}</a></li>
+    {% endfor %}
+  </ul>
+
+  
+
+
+
+{% endblock %}
